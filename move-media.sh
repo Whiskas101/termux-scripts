@@ -14,10 +14,10 @@ move_media(){
 	echo "Moving files from MEGA..."
 	find "$MEGAPATH" -type f -print0 | grep -E -z "\.(txt|mp4|mkv|mov|avi|webm|png|jpg|jpeg|webp)" | xargs -0 -I {} mv {} "$DEST/"
 
-	#echo "Moving files from REDDIT..."
+	echo "Moving files from REDDIT..."
 	find "$REDDITPATH" -type f -print0 | grep -E -z "\.(txt|mp4|mkv|mov|avi|webm|png|jpg|jpeg|webp)" | xargs -0 -I {} mv {} "$DEST/"
 
-	#echo "Moving files from Downloads..."
+	echo "Moving files from Downloads..."
 	find "$DWNLDPATH" -type f -print0 | grep -E -z "\.(txt|mp4|mkv|mov|avi|webm|png|jpg|jpeg|webp)" | xargs -0 -I {} mv {} "$DEST/"
 	#find "$DWNLDPATH" -type f -print0 | grep -E -z "*\.txt|*\.mp4| *\.mkv|*\.mov|*\.avi|*\.webm|*\.png|*\.jpg|*\.jpeg|*\.webp" | xargs -0 -I {} mv {} "$DEST/{}"
 
